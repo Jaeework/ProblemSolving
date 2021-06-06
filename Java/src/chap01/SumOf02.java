@@ -1,5 +1,6 @@
 package chap01;
 import java.util.Scanner;
+//a, b의 대소 관계에 상관없이 a부터 b까지 합을 구합니다.
 
 public class SumOf02 {
 
