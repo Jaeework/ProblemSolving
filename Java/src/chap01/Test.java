@@ -1,31 +1,27 @@
 package chap01;
+
 import java.util.Scanner;
 
+// 재귀함수 - 팩토리얼
 public class Test {
 	
-	static void triangleRB(int n) {
-		for(int i = 0; i < n; i++) {
-			for(int j = n; j > i; j-- ) {
-				System.out.print(" ");
-			}
-			for(int k = 0; k < (2*i + 1); k++) {
-				System.out.print(i+1);
-			}
-			System.out.println();
-		}
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		do {
+			System.out.print("양의 정수 n 입력 : ");
+			n = sc.nextInt();
+		} while(n <= 0);
+		
+		System.out.println(facto(n));
 	}
 	
-	public static void main(String[] args) {
-		Scanner stdIn = new Scanner(System.in);
-		int a = 0;
-		do {
-			System.out.println("a : ");
-			a = stdIn.nextInt();
-		}while(a <= 0);
+	static int facto(int n) {
 		
-		//triangleLB(a);
-		//triangleLU(a);
-		//triangleRU(a);
-		triangleRB(a);
+		if(n == 1) {
+			return 1;
+		} else {
+			return n * facto(n - 1);
+		}
 	}
 }
