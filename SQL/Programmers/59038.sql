@@ -1,0 +1,3 @@
+-- Programmers 59038 : 집계함수_최솟값
+SELECT MIN(DATETIME) AS 시간
+FROM ANIMAL_INS
