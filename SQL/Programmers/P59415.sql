@@ -1,0 +1,3 @@
+-- Programmers 59415 : 집계함수_MAX
+SELECT MAX(DATETIME) AS 시간
+FROM ANIMAL_INS
